@@ -1,0 +1,185 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "cellphoneNumber": "987654321",
+      "names": "Jhon Juan",
+      "lastNames": "Doe Marcial",
+      "address": "av. Los manzanos 123",
+      "email": "jhon.doe@gmail.com",
+      "password": "jhonjuan",
+      "planType": "None"
+    },
+    {
+      "id": 2,
+      "cellphoneNumber": "987433213",
+      "names": "Juan Pedro",
+      "lastNames": "Lopez Gonzales",
+      "address": "av. Brazil 1055",
+      "email": "juanloe@gmail.com",
+      "password": "juanloe",
+      "planType": "Standard"
+    },
+    {
+      "id": 3,
+      "cellphoneNumber": "987743212",
+      "names": "Jose Fernando",
+      "lastNames": "Sanchez Cerro",
+      "address": "av. Palomas 345",
+      "email": "josesan@gmail.com",
+      "password": "josefernan",
+      "planType": "Premium"
+    }
+  ],
+  "technicians": [
+    {
+      "id": 1,
+      "names": "Juan Fernando",
+      "lastNames": "Ramirez Rojas",
+      "cellphoneNumber": "999123455",
+      "address": "Urb. Thiago Terán # 452",
+      "email": "jmanzanares@gmail.com",
+      "password": "juanfer"
+    },
+    {
+      "id": 2,
+      "names": "Ricardo",
+      "lastNames": "Farías Aragón",
+      "cellphoneNumber": "958870344",
+      "address": "Jr. Alonso Gallegos # 05 Piso 0",
+      "email": "maya.mario@gmail.com",
+      "password": "mayamar"
+    },
+    {
+      "id": 3,
+      "names": "Alverto Jorge",
+      "lastNames": "Águilar Guzmán",
+      "cellphoneNumber": "937506140",
+      "address": "Av. Mario Vallejo # 65591 Piso 43",
+      "email": "cortes.valentino@gmail.com",
+      "password": "alveragui"
+    }
+  ],
+  "reports": [
+    {
+      "id": "1",
+      "observation": "Circuit burned",
+      "diagnosis": "An internal circuit of the refrigerator has burned out due to excessive use.",
+      "repairDescription": "I soldered the burned circuit",
+      "date": "21/5/2022",
+      "technicianId": 1
+    },
+    {
+      "id": "2",
+      "observation": "Cable disconnected",
+      "diagnosis": "An internal cable was disconnected from the washing machine, possibly due to movement of the washing machine.",
+      "repairDescription": "I took the washer apart to get to the internal circuits and reconnected the cable.",
+      "date": "25/5/2022",
+      "imagePath": "image.png",
+      "appointmentId": 2,
+      "technicianId": 1
+    },
+    {
+      "id": "3",
+      "observation": "Program buttons did not work",
+      "diagnosis": "The buttons on the microwave were not working, this was caused by an internal short-circuit.",
+      "repairDescription": "I replaced and soldered the internal circuit",
+      "date": "23/5/2022",
+      "imagePath": "image.png",
+      "appointmentId": 3,
+      "technicianId": 2
+    }
+  ],
+  "applianceModels": [
+    {
+      "id": "1",
+      "name": "Refrigerator French Door IBACI Inox Look, 547 L (110 V)",
+      "model": "RF220FCTAS8/AP",
+      "imagePath": "https://cdn.tecnologia21.com/wp-content/uploads/2011/02/samsung-refrigeradoras.jpg",
+      "clientId": 1
+    },
+    {
+      "id": "2",
+      "name": "Sliding Design Gas Cooker",
+      "model": "NX60T8115SS/AP",
+      "imagePath": "https://m.media-amazon.com/images/I/613epBv73dL._AC_SX679_.jpg",
+      "clientId": 1
+    },
+    {
+      "id": "3",
+      "name": "Licuadora  Valeska",
+      "model": "XS 300W",
+      "imagePath": "https://oechsle.vteximg.com.br/arquivos/ids/7633171-800-800/2047411.jpg?v=637828998387600000",
+      "clientId": 2
+    },
+    {
+      "id": "4",
+      "name": " Microwave Oster",
+      "model": "POGGM3901M 25 Lt Silver",
+      "imagePath": "https://oechsle.vteximg.com.br/arquivos/ids/4000449-1000-1000/image-6d95d0519a874364a35310aadad62cd9.jpg?v=637599113101530000",
+      "clientId": 2
+    },
+    {
+      "id": "5",
+      "name": "Washing-machine 9 kg",
+      "model": "WAU28T6XES",
+      "imagePath": "https://falabella.scene7.com/is/image/Falabella/14724140_1?wid=1500&hei=1500&qlt=70",
+      "clientId": 2
+    },
+    {
+      "id": "6",
+      "name": "Dust and Water Vacuum",
+      "model": "GT30N",
+      "imagePath": "https://electroluxpe.vtexassets.com/arquivos/ids/155418-1200-1200?v=636953045000130000&width=1200&height=1200&aspect=true",
+      "clientId": 3
+    },
+    {
+      "id": "7",
+      "name": "Refrigerator Bottom Freezer 336L, Multiple Airflow, Humidity Control and Wi-Fi Connectivity",
+      "model": "GB37WGT",
+      "imagePath": "https://www.lg.com/co/images/lavadoras-y-secadoras/md07512821/gallery/D-01.jpg",
+      "clientId": 3
+    },
+    {
+      "id": "8",
+      "name": "Drying machine 9 Kg, front loading with Dual Inverter Heat Pump, EcoHybrid and Wi-Fi connectivity",
+      "model": "DF9WVC2S6",
+      "imagePath": "https://www.lg.com/levant_en/images/washing-machines/md05829412/gallery/1600_01.jpg",
+      "clientId": 1
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "dateReserve": "19/10/2021",
+      "dateAttention": "22/09/2022",
+      "hour": "02:19",
+      "clientId": 1,
+      "applianceModelId": 1
+    },
+    {
+      "id": 2,
+      "dateReserve": "19/10/2021",
+      "dateAttention": "20/10/2022",
+      "hour": "09:42",
+      "clientId": 2,
+      "applianceModelId": 4
+    },
+    {
+      "id": 3,
+      "dateReserve": "19/10/2021",
+      "dateAttention": "15/06/2022",
+      "hour": "11:59",
+      "clientId": "2",
+      "applianceModelId": 3
+    },
+    {
+      "id": 4,
+      "dateReserve": "19/10/2021",
+      "dateAttention": "20/10/2022",
+      "hour": "09:42",
+      "clientId": 3,
+      "applianceModelId": 7
+    }
+  ]
+}

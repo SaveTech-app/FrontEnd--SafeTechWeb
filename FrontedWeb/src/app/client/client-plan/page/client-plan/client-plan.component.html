@@ -1,0 +1,56 @@
+<app-client-navbar></app-client-navbar>
+
+<section class = "flex-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>MONTHLY</mat-card-title>
+      <mat-card-subtitle>Basic Plan</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://i.imgur.com/Xup56ec.jpg" alt="Plan Basico" class="img">
+    <mat-card-content>
+      <p>
+        This plan is only for 1 month
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="clickAddTodo('Basic')">CHOOSE PLAN</button>
+      <div class="planBasic" *ngIf="clientData.planType=='Basic'">Plan Selected</div>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>QUARTERLY</mat-card-title>
+      <mat-card-subtitle>Standart Plan</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://i.imgur.com/Ycbaez2.jpg" alt="Plan Basico" class="img">
+    <mat-card-content>
+      <p>
+        This plan is only for 3 months
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="btn btn-primary" (click)="clickAddTodo('Standard')">CHOOSE PLAN</button>
+      <div class="planStandard" *ngIf="clientData.planType=='Standard'">Plan Selected</div>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>YEARLY</mat-card-title>
+      <mat-card-subtitle>Premium Plan</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://i.imgur.com/vmCJdxC.jpg" alt="Plan Basico" class="img">
+    <mat-card-content>
+      <p>
+        This plan is only for 1 year
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="btn btn-primary" (click)="clickAddTodo('Premium')">CHOOSE PLAN</button>
+      <div class="planPremium"  *ngIf="clientData.planType=='Premium'">Plan Selected</div>
+
+
+    </mat-card-actions>
+  </mat-card>
+</section>

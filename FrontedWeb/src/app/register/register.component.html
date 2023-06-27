@@ -1,0 +1,35 @@
+<app-home-navbar></app-home-navbar>
+
+
+<section class = "flex-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Register Client</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://i.imgur.com/eRknT6R.png" alt="Client" class="img">
+    <mat-card-actions>
+      <button [routerLink]="'/register-client'"
+              mat-raised-button
+              color="primary">
+        Register Client
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Register Technician</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://i.imgur.com/n7SsM24.png" alt="Tech" class="img">
+    <mat-card-actions>
+      <button [routerLink]="'/register-technician'"
+              mat-raised-button
+              color="primary">
+        Register Technician
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</section>
+
+

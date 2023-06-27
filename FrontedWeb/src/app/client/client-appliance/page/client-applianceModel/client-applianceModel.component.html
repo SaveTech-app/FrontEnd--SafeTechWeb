@@ -1,0 +1,18 @@
+<app-client-navbar></app-client-navbar>
+<button  mat-raised-button color="accent" (click)="openDialogAdd()">Add Item</button>
+<mat-form-field appearance="fill" class="search">
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="searchKey">
+</mat-form-field>
+<section class = "flex-container">
+    <mat-card class="card" *ngFor="let applianceModel of appliancesModelData| filter:searchKey:'name';">
+      <mat-card-header  class="mat-card-icon">
+        <button  mat-raised-button color="accent" (click)="openDialogUpdate(applianceModel)">Edit Item</button>
+      </mat-card-header>
+  <img mat-card-image class="imagen" [src]="applianceModel.urlToImage"  alt="Refrigerator">
+      <mat-card-content class="texto">
+        <div><td><strong>Name:</strong></td>{{applianceModel.name}}</div>
+        <div><td><strong>Model:</strong></td>{{applianceModel.model}}</div>
+      </mat-card-content>
+    </mat-card>
+</section>

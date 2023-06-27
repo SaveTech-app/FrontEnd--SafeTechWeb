@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>Would you like to add an item?</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editApplianceModelFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput  autocomplete="off" formControlName="name" >
+    <mat-error *ngIf="editApplianceModelFormGroup.get('name')?.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Url To Image</mat-label>
+    <input matInput type="url" autocomplete="off" formControlName="urlToImage" >
+    <mat-error *ngIf="editApplianceModelFormGroup.get('urlToImage')?.hasError('required')">
+      Url is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Model</mat-label>
+    <input matInput  autocomplete="off" formControlName="model" >
+    <mat-error *ngIf="editApplianceModelFormGroup.get('model')?.hasError('required')">
+      Model is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
+  <button *ngIf="editApplianceModelFormGroup" mat-raised-button color="accent" [mat-dialog-close]="editApplianceModelFormGroup"
+          [disabled]="editApplianceModelFormGroup.invalid" >Ok</button>
+</div>

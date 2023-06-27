@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/fronted-aplication-white-programmers",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

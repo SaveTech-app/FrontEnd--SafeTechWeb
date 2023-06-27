@@ -1,0 +1,45 @@
+<app-home-navbar></app-home-navbar>
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <!--<mat-card-title>Login</mat-card-title>-->
+      <div class="centered-text">
+        <img src="assets/Safe.png" alt="Imagen Segura">
+      </div>
+    </mat-card-header>
+    <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="userFormGroup">
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput  autocomplete="off" formControlName="username" >
+      <mat-error *ngIf="userFormGroup.get('username')?.hasError('required')">
+        Username is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput autocomplete="off" formControlName="password" type="password">
+        <mat-error *ngIf="userFormGroup.get('password')?.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="userFormGroup.get('password')?.hasError('minlength')">
+        Password must have at least <strong>6</strong> characters
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" (click)="SubmitLogin()">Iniciar sesión</button>
+    </form>
+    <br><br>
+    <div class="centered-text">
+      <span style="color: rgb(9, 9, 9); margin-top: 5px; text-align: center;">
+        ¿Olvidaste tu contraseña? Haz clic<a [routerLink]="['/register']"> aquí</a>
+      </span>
+      <div class="centered-text-below">
+        <a [routerLink]="['/register']">REGISTRARME</a>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<button mat-button matSuffix type="button" (click)="showPassword = !showPassword">
+  <mat-icon>{{ showPassword ? "visibility" : "visibility_off" }}</mat-icon>
+</button>

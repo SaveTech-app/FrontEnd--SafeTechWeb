@@ -1,0 +1,85 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>Would you like to save changes</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editTechnicianProfileFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>FirstName</mat-label>
+    <input matInput  autocomplete="off" formControlName="names" >
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('required')">
+      FirstName is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('minlength')">
+      FirstName must have at least <strong>6</strong> characters
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('maxlength') &&
+                            !editTechnicianProfileFormGroup.get('names')?.hasError('required')">
+      FirstName must have less than <strong>16</strong> characters
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>LastName</mat-label>
+    <input matInput  autocomplete="off" formControlName="lastNames" >
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('required')">
+      LastName is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('minlength')">
+      LastName must have at least <strong>6</strong> characters
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('maxlength') &&
+                            !editTechnicianProfileFormGroup.get('lastNames')?.hasError('required')">
+      LastName must have less than <strong>16</strong> characters
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput  autocomplete="off" formControlName="address" >
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('required')">
+      Address is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('minlength')">
+      Address must have at least <strong>6</strong> characters
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>CellPhoneNumber</mat-label>
+    <input matInput type="number" autocomplete="off" formControlName="cellPhoneNumber" >
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('cellPhoneNumber')?.hasError('required')">
+      CellPhoneNumber is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('cellPhoneNumber')?.hasError('pattern')">
+      CellPhoneNumber must have a valid <strong>number</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" autocomplete="off" formControlName="email" >
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('email')">Invalid email</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput autocomplete="off" formControlName="password" type="password">
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('required')">
+      Password is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('minlength')">
+      Password must have at least <strong>6</strong> characters
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
+  <button *ngIf="editTechnicianProfileFormGroup" mat-raised-button color="accent" [mat-dialog-close]="editTechnicianProfileFormGroup"
+          [disabled]="editTechnicianProfileFormGroup.invalid" >Ok</button>
+</div>

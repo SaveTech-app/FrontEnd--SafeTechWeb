@@ -1,0 +1,42 @@
+.example-card {
+  max-width: 550px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.example-header-image {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+  background-size: cover;
+}
+
+.mat-button{
+  margin: 0 auto;
+  width: 100%;
+  background-color: #673ab7;
+  color: white;
+}
+
+.input-box{
+  border-radius: 4px;
+  text-indent: 10px;
+  height: 25px;
+  margin-top:5px ;
+  border-width: 1px;
+  color: #666666;
+}
+.input-bir{
+  text-indent: 5px;
+  color: #666666;
+  border-radius: 4px;
+  height: 25px;
+  width: 270px;
+}
+.text-tarea{
+  color: #666666;
+  border-radius: 4px;
+}
+.button{
+  display:flex;
+  flex-direction: row-reverse;
+  align-items: start;
+}

@@ -1,0 +1,18 @@
+<app-client-navbar></app-client-navbar>
+<button  mat-raised-button color="accent" (click)="openDialogAdd()">Register Appointment</button>
+<section class = "flex-container">
+  <mat-card class="card" *ngFor="let appointment of appointmentData; index as i">
+    <mat-card-header  class="mat-card-icon">
+      <button  mat-raised-button color="accent" (click)="openDialogUpdate(appointment)">Edit Item</button>
+    </mat-card-header>
+    <img mat-card-image class="imagen" [src]="appointment.applianceModel.urlToImage"  alt="Refrigerator">
+    <mat-card-content class="texto">
+      <div><td><strong>Name:</strong></td>{{appointment.applianceModel.name}}</div>
+      <div><td><strong>Model:</strong></td>{{appointment.applianceModel.model}}</div>
+      <div><td><strong>DateReserve:</strong></td>{{appointment.dateReserve}}</div>
+      <div><td><strong>DateAttention:</strong></td>{{appointment.dateAttention}}</div>
+      <div><td><strong>Hour:</strong></td>{{appointment.hour}}</div>
+    </mat-card-content>
+  </mat-card>
+</section>
+

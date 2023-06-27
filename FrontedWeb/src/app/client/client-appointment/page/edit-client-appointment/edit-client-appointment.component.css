@@ -1,0 +1,16 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+.formulario__campo {
+  border-width: 1rem;
+  border-style: solid;
+  background-color: transparent;
+  color:black;
+  font-size: 2rem;
+  font-family: Arial,Helvetica,sans-serif;
+  padding: 1rem;
+  appearance: none;
+  /**border: 1rem solid var(--primarioOscuro);**/
+}

@@ -1,0 +1,33 @@
+<app-technician-navbar></app-technician-navbar>
+
+<h1 class="title-config">My Reports</h1>
+<button  mat-raised-button color="accent" (click)="openDialogAdd()">Add Item</button>
+<mat-grid-list cols="2" rowHeight="2:1" >
+  <mat-grid-tile class = "grid-config" *ngFor="let report of reportsData; let i = index" [attr.data-index]="i">
+    <mat-accordion class="example-headers-align">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{i+1}}
+          </mat-panel-title>
+          <mat-panel-description>
+            <td><strong>Report data for the Technician</strong></td>
+            <mat-icon>account_circle</mat-icon>
+          </mat-panel-description>
+
+        </mat-expansion-panel-header>
+
+        <h4 class="h4-config" *ngIf="technicianData[i]"> Technician Name: {{technicianData[i].names}} </h4>
+        <h4 class="h4-config" *ngIf="reportsData[i]"> <td><strong>Observation:</strong></td> {{reportsData[i].observation}}</h4>
+        <h4 class="h4-config" *ngIf="reportsData[i]"> <td><strong>Diagnosis:</strong></td> {{reportsData[i].diagnosis}}</h4>
+        <h4 class="h4-config" *ngIf="reportsData[i]"> <td><strong>Repair Description:</strong></td> {{reportsData[i].repairDescription}}</h4>
+        <h4 class="h4-config" *ngIf="reportsData[i]"> <td><strong>Date:</strong></td> {{reportsData[i].date}}</h4>
+        <button  mat-raised-button color="accent" (click)="openDialogUpdate(reportsData[i])">Edit Item</button>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
+

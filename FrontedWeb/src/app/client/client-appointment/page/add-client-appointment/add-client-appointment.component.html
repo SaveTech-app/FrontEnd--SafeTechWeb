@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>Would you like to add an item?</p>
+</div>
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="appointmentFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>Date Reserve</mat-label>
+    <input matInput type="date" autocomplete="off" formControlName="dateReserve" >
+    <mat-error *ngIf="appointmentFormGroup.get('dateReserve')?.hasError('required')">
+      Date Reserve is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date Attention</mat-label>
+    <input matInput type="date" autocomplete="off" formControlName="dateAttention" >
+    <mat-error *ngIf="appointmentFormGroup.get('dateAttention')?.hasError('required')">
+      Date Attention is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Hour</mat-label>
+    <input matInput autocomplete="off" formControlName="hour" >
+    <mat-error *ngIf="appointmentFormGroup.get('hour')?.hasError('required')">
+      Hour is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="data.selected">
+      <mat-option [value]="applianceModel.id" *ngFor="let applianceModel of data.applianceModel;">{{applianceModel.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
+  <button mat-raised-button color="primary" (click)="onClick()" [mat-dialog-close]="data" type="submit" [disabled]="appointmentFormGroup.invalid">OK</button>
+</div>

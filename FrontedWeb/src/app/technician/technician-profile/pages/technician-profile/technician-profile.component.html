@@ -1,0 +1,20 @@
+<app-technician-navbar></app-technician-navbar>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Profile Information</mat-card-title>
+    <mat-card-subtitle>User-Profile</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://cmsresources.elempleo.com/co/assets/backend/styles/770x513/public/fotos/noticias/istock-480012828.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content class="texto">
+    <div><td><strong>Name:</strong></td>{{technicianActual.names}}</div>
+    <div><td><strong>LastName:</strong></td>{{technicianActual.lastNames}}</div>
+    <div><td><strong>Address:</strong></td>{{technicianActual.address}}</div>
+    <div><td><strong>CellphoneNumber:</strong></td>{{technicianActual.cellPhoneNumber}}</div>
+    <div><td><strong>Email:</strong></td>{{technicianActual.email}}</div>
+    <div><td><strong>Password:</strong></td>{{technicianActual.password}}</div>
+  </mat-card-content>
+  <mat-card-actions  class="button">
+    <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(technicianActual)">edit</mat-icon>
+  </mat-card-actions>
+</mat-card>

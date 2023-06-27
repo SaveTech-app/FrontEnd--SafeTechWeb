@@ -1,0 +1,21 @@
+<app-client-navbar></app-client-navbar>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Profile Information</mat-card-title>
+    <mat-card-subtitle>User-Profile</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://st4.depositphotos.com/4678277/28801/i/450/depositphotos_288019916-stock-photo-profile-side-view-of-his.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content class="texto">
+    <div><td><strong>Name:</strong></td>{{clientActual.names}}</div>
+    <div><td><strong>LastName:</strong></td>{{clientActual.lastNames}}</div>
+    <div><td><strong>Address:</strong></td>{{clientActual.address}}</div>
+    <div><td><strong>CellphoneNumber:</strong></td>{{clientActual.cellPhoneNumber}}</div>
+    <div><td><strong>Email:</strong></td>{{clientActual.email}}</div>
+    <div><td><strong>Password:</strong></td>{{clientActual.password}}</div>
+  </mat-card-content>
+  <mat-card-actions class="button">
+    <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(clientActual)">edit</mat-icon>
+  </mat-card-actions>
+</mat-card>
+

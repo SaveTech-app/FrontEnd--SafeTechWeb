@@ -1,0 +1,13 @@
+<app-technician-navbar></app-technician-navbar>
+<h1 class="title-config">My Route</h1>
+<mat-stepper class="bg-transparent" orientation="vertical" *ngFor="let appointment of appointmentData; index as i ">
+  <mat-step>
+    <ng-template matStepLabel>Appointment {{[i+1]}}</ng-template>
+    <ng-template matStepContent>
+      <div *ngIf="clientData[i]"><td><strong>Address:</strong></td>{{clientData[i].address}}</div>
+      <div><td><strong>Date Attention:</strong></td>{{appointment.dateAttention}}</div>
+      <div><td><strong>Hour:</strong></td>{{appointment.hour}}</div>
+    </ng-template>
+  </mat-step>
+
+</mat-stepper>

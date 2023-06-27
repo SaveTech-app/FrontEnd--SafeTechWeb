@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>Would you like to add an item?</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editReportFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>Observation</mat-label>
+    <input matInput  autocomplete="off" formControlName="observation" >
+    <mat-error *ngIf="editReportFormGroup.get('observation')?.hasError('required')">
+      Observation is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Diagnosis</mat-label>
+    <input matInput  autocomplete="off" formControlName="diagnosis" >
+    <mat-error *ngIf="editReportFormGroup.get('diagnosis')?.hasError('required')">
+      Diagnosis is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>RepairDescription</mat-label>
+    <input matInput  autocomplete="off" formControlName="repairDescription" >
+    <mat-error *ngIf="editReportFormGroup.get('repairDescription')?.hasError('required')">
+      RepairDescription is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput type="date" autocomplete="off" formControlName="date" >
+    <mat-error *ngIf="editReportFormGroup.get('date')?.hasError('required')">
+      Date is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">No Thanks</button>
+  <button *ngIf="editReportFormGroup" mat-raised-button color="accent" [mat-dialog-close]="editReportFormGroup"
+          [disabled]="editReportFormGroup.invalid" >Ok</button>
+</div>

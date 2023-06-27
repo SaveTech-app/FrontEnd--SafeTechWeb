@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+  mat-toolbar{
+    height: 65px;
+    gap: 2rem;
+
+  }
+  .mat-spacer {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 768px) {
+  mat-toolbar{
+    display: flex;
+    height: 300px;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}

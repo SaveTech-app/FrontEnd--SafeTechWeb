@@ -1,0 +1,15 @@
+.paspartu {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+iframe {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: calc(100% + 20px);
+  overflow-y: auto;
+}
