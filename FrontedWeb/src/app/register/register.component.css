@@ -222,6 +222,13 @@ template {
 
 .img{
   background-size:cover;
-  height: 500px;
-  width: 450px;
+  height: 300px;
+  width: 200px;
+  max-height: 500px;
+  max-width: 450px;
+}
+
+.image-role{
+  height: 300px;
+  width: 250px;
 }

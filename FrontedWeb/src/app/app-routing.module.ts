@@ -46,8 +46,8 @@ const routes: Routes = [
     ]
   },
   { path: 'technician/:id',
-    canActivate: [TechnicianGuard],
-    canActivateChild: [TechnicianGuard],
+    // canActivate: [TechnicianGuard],
+    // canActivateChild: [TechnicianGuard],
     children:[
       { path: '', redirectTo: 'technician-profile',pathMatch: 'full'},
       { path: 'technician-profile', component: TechnicianProfileComponent},

@@ -29,7 +29,7 @@ export class EditTechnicianProfileComponent {
       names:data.names,
       lastNames:data.lastNames,
       address:data.address,
-      cellphoneNumber:data.cellPhoneNumber,
+      cellPhoneNumber:data.cellPhoneNumber,
       email:data.email,
       password:data.password
     })

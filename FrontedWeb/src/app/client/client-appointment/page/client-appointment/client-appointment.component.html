@@ -1,18 +1,39 @@
 <app-client-navbar></app-client-navbar>
-<button  mat-raised-button color="accent" (click)="openDialogAdd()">Register Appointment</button>
-<section class = "flex-container">
-  <mat-card class="card" *ngFor="let appointment of appointmentData; index as i">
-    <mat-card-header  class="mat-card-icon">
-      <button  mat-raised-button color="accent" (click)="openDialogUpdate(appointment)">Edit Item</button>
-    </mat-card-header>
-    <img mat-card-image class="imagen" [src]="appointment.applianceModel.urlToImage"  alt="Refrigerator">
-    <mat-card-content class="texto">
-      <div><td><strong>Name:</strong></td>{{appointment.applianceModel.name}}</div>
-      <div><td><strong>Model:</strong></td>{{appointment.applianceModel.model}}</div>
-      <div><td><strong>DateReserve:</strong></td>{{appointment.dateReserve}}</div>
-      <div><td><strong>DateAttention:</strong></td>{{appointment.dateAttention}}</div>
-      <div><td><strong>Hour:</strong></td>{{appointment.hour}}</div>
-    </mat-card-content>
-  </mat-card>
-</section>
+
+
+<div class="container my-3 border" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+  <!-- BUTTON ADD -->
+  <div class="row justify-content-end">
+    <div class="col-md-2 m-2 border ">
+      <button  mat-raised-button color="primary" (click)="openDialogAdd()">Add Appointment</button>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>My Appointments</h2>
+    </div>
+    <div class="row m-2 justify-content-around">
+      <!-- CITAS -->
+      <div class="card" style="width: 18rem;" *ngFor="let appointment of appointmentData; index as i">
+        <img [src]="appointment.applianceModel.urlToImage" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{appointment.applianceModel.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><p><b>Model: </b>{{appointment.applianceModel.model}}</p></li>
+          <li class="list-group-item"><p><b>Date Reserve: </b>{{appointment.dateReserve}}</p></li>
+          <li class="list-group-item"><p><b>Date Attention: </b>{{appointment.dateAttention}}</p></li>
+          <li class="list-group-item"><p><b>Hour: </b>{{appointment.hour}}</p></li>
+        </ul>
+        <div class="row justify-content-end">
+          <div class="col-md-12">
+            <button mat-mini-fab color="primary">
+              <mat-icon (click)="openDialogUpdate(appointment)">edit</mat-icon>
+            </button>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

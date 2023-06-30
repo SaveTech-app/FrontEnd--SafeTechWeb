@@ -13,8 +13,8 @@ import {EditClientProfileComponent} from "../edit-client-profile/edit-client-pro
 export class ClientProfileComponent implements OnInit {
 
   id:string;
-  clientActual: Client;
-
+  clientActual: Client; 
+  
   constructor(private clientsService: ClientsService, private route: ActivatedRoute,
               private dialog: MatDialog) {
     this.id=this.route.snapshot.paramMap.get('id')!;

@@ -1,4 +1,4 @@
-<app-technician-navbar></app-technician-navbar>
+<!-- <app-technician-navbar></app-technician-navbar>
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -17,4 +17,49 @@
   <mat-card-actions  class="button">
     <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(technicianActual)">edit</mat-icon>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+
+<app-client-navbar></app-client-navbar>
+
+<div class="container my-3 border-shadow">
+  <div class="row">
+    <!-- EDITAR -->
+    <div class="row  m-0 mt-2">
+      <mat-card-actions class="button">
+        <button class="mat-raised-button">
+          <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(technicianActual)">edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+    <!-- IMAGEN -->
+    <div class="row p-3 justify-content-center">
+      <div class="col-md-10  text-center">
+        <img class="img-profile rounded-circle" src="https://st4.depositphotos.com/4678277/28801/i/450/depositphotos_288019916-stock-photo-profile-side-view-of-his.jpg" alt="">
+      </div>
+    </div>
+    <!-- DATOS PERSONALES -->
+    <div class="row m-0 justify-content-center border-shadow">
+      <div class="col-md-5  info-user">
+        <p>Name: {{technicianActual.names}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Lastname: {{technicianActual.lastNames}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Address: {{technicianActual.address}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Email: {{technicianActual.email}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Username: {{technicianActual.username}}</p>
+      </div>
+      <div class="col-md-5   info-user">
+        <p>Phone number: {{technicianActual.cellPhoneNumber}}</p>
+      </div>
+    </div>
+    
+
+  </div>
+</div>

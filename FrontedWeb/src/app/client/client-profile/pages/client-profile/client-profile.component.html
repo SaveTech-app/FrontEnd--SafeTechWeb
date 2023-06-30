@@ -1,21 +1,43 @@
 <app-client-navbar></app-client-navbar>
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Profile Information</mat-card-title>
-    <mat-card-subtitle>User-Profile</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://st4.depositphotos.com/4678277/28801/i/450/depositphotos_288019916-stock-photo-profile-side-view-of-his.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content class="texto">
-    <div><td><strong>Name:</strong></td>{{clientActual.names}}</div>
-    <div><td><strong>LastName:</strong></td>{{clientActual.lastNames}}</div>
-    <div><td><strong>Address:</strong></td>{{clientActual.address}}</div>
-    <div><td><strong>CellphoneNumber:</strong></td>{{clientActual.cellPhoneNumber}}</div>
-    <div><td><strong>Email:</strong></td>{{clientActual.email}}</div>
-    <div><td><strong>Password:</strong></td>{{clientActual.password}}</div>
-  </mat-card-content>
-  <mat-card-actions class="button">
-    <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(clientActual)">edit</mat-icon>
-  </mat-card-actions>
-</mat-card>
 
+<div class="container my-3 border-shadow">
+  <div class="row">
+    <!-- EDITAR -->
+    <div class="row  m-0 mt-2">
+      <mat-card-actions class="button">
+        <button class="mat-raised-button">
+          <mat-icon aria-hidden="false" aria-label="Example edit icon" (click)="openDialog(clientActual)">edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+    <!-- IMAGEN -->
+    <div class="row p-3 justify-content-center">
+      <div class="col-md-10  text-center">
+        <img class="img-profile rounded-circle" src="https://st4.depositphotos.com/4678277/28801/i/450/depositphotos_288019916-stock-photo-profile-side-view-of-his.jpg" alt="">
+      </div>
+    </div>
+    <!-- DATOS PERSONALES -->
+    <div class="row m-0 justify-content-center border-shadow">
+      <div class="col-md-5  info-user">
+        <p>Name: {{clientActual.names}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Lastname: {{clientActual.lastNames}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Address: {{clientActual.address}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Email: {{clientActual.email}}</p>
+      </div>
+      <div class="col-md-5 info-user">
+        <p>Username: {{clientActual.username}}</p>
+      </div>
+      <div class="col-md-5   info-user">
+        <p>Phone number: {{clientActual.cellPhoneNumber}}</p>
+      </div>
+    </div>
+    
+
+  </div>
+</div>

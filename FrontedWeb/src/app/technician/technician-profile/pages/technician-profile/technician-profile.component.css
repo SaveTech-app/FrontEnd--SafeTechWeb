@@ -40,3 +40,14 @@
   flex-direction: row-reverse;
   align-items: start;
 }
+
+.img-profile {
+  width: 250px; 
+  height: 250px;
+  text-align: center;
+}
+
+
+.border-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

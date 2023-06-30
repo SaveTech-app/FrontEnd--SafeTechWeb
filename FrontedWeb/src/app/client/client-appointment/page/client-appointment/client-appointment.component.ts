@@ -15,7 +15,8 @@ import {AddClientAppointmentComponent} from "../add-client-appointment/add-clien
 })
 export class ClientAppointmentComponent implements OnInit {
   id: string;
-  appointmentData: Appointment[];
+  appointmentData: Appointment[] = [];
+  
   appliancesModelData: ApplianceModel[];
 
   constructor(private route: ActivatedRoute, private appointmentsService: AppointmentsService,private appliancesModelService: AppliancesModelService,
@@ -26,7 +27,7 @@ export class ClientAppointmentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.updateAppointmentsData();
+    // this.updateAppointmentsData();
   }
 
   updateAppointmentsData(){

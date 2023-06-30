@@ -14,6 +14,7 @@ export class TechnicianProfileComponent implements OnInit {
 
   id:string;
   technicianActual: Technician;
+ 
 
   constructor(private techniciansService: TechniciansService, private route: ActivatedRoute,
               private dialog: MatDialog) {
